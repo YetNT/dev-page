@@ -3,4 +3,32 @@
 html {
     height: 100%;
     width: 100%;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 1.4em;
+}
+
+body {
+    background-color: rgb(7, 121, 83);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+a {
+    color: silver;
+}
+
+a:visited {
+    color: silver;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
 }

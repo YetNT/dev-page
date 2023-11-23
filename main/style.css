@@ -1,0 +1,37 @@
+img {
+    width: clamp(2em, 3em, 4em);
+}
+#socials {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4em;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 1000px) {
+    #socials {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+    }
+}
+
+#socials h1 {
+    /* Title for socials */
+    margin-bottom: -1em; /* It fucking works, dont ask how */
+}
+
+#socials div {
+    /* Inital div */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#socials div div {
+    /* actual div with socials */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
