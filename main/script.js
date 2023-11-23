@@ -17,5 +17,5 @@ for (const key of Object.keys(links)) {
 
     link.setAttribute("href", links[key]);
     const image = link.querySelector("img");
-    image.setAttribute("src", `../img/${key}.svg`);
+    image.setAttribute("src", `./img/${key}.svg`);
 }
