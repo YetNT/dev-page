@@ -1,10 +1,10 @@
 img {
-    width: clamp(2em, 3em, 4em);
+    width: 2em;
 }
 #socials {
     display: flex;
     flex-direction: row;
-    column-gap: 4em;
+    column-gap: 6em;
     align-items: center;
     justify-content: center;
 }
@@ -14,11 +14,9 @@ img {
         flex-direction: column;
         row-gap: 2em;
     }
-}
-
-#socials h1 {
-    /* Title for socials */
-    margin-bottom: -1em; /* It fucking works, dont ask how */
+    img {
+        width: 1.3em;
+    }
 }
 
 #socials div {
@@ -26,6 +24,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #socials div div {
@@ -33,5 +32,11 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     column-gap: 20px;
+}
+
+.particle {
+    fill: orange;
+    stroke: black;
 }
