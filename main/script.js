@@ -24,25 +24,46 @@ for (const key of Object.keys(links)) {
     image.setAttribute("src", `./img/${key}.svg`);
 }
 
-const html = document.getElementById("html");
 const bg = document.getElementById("background");
 
-//html.addEventListener("mousemove", function (event) {
 setInterval(function () {
     myFunction();
-}, 250);
-//});
+}, 1000);
 
 function myFunction() {
-    var img = document.createElement("img");
+    var particle = createParticle();
+    particle.src = stars[Math.floor(Math.random() * stars.length)];
+    bg.appendChild(particle);
+
+    void particle.offsetWidth;
+
+    // to get duration of how long the particle should live V
+
+    const destX = Math.floor(Math.random() * width);
+    const destY = Math.floor(Math.random() * height);
+
+    const distance = Math.sqrt(
+        (destX - particle.offsetLeft) ** 2 + (destY - particle.offsetTop) ** 2
+    );
+    const duration = 0.5 + Math.min(distance / 500, 1);
+
+    particle.style.transition = `transform ${duration}s ease-out, opacity ${duration}s ease-out, rotate ${duration}s ease-out`;
+    particle.style.transform = `translate(${destX}px, ${destY}px) rotate(${
+        Math.random() * 360
+    }deg)`;
+    particle.style.opacity = `0`;
+
+    setTimeout(function () {
+        bg.removeChild(particle);
+    }, duration * 1000);
+}
+
+function createParticle() {
+    const img = document.createElement("img");
     img.style.position = "absolute";
     img.style.top = `2px`;
-    img.style.opacity = "0.1";
+    img.style.opacity = "0.8";
     img.style.left = `${Math.floor(Math.random() * width)}px`;
     img.style.top = `${Math.floor(Math.random() * height)}px`;
-    img.src = stars[Math.floor(Math.random() * stars.length)];
-    bg.appendChild(img);
-    setTimeout(function () {
-        bg.removeChild(img);
-    }, 500);
+    return img;
 }
