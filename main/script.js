@@ -13,8 +13,9 @@ const links = {
 };
 
 const stars = ["./img/4.svg", "./img/5.svg", "./img/6.svg"];
-const width = document.documentElement.clientWidth;
-const height = document.documentElement.clientHeight;
+
+let width = document.documentElement.clientWidth;
+let height = document.documentElement.clientHeight;
 
 for (const key of Object.keys(links)) {
     const link = document.getElementById(key);
@@ -31,6 +32,9 @@ setInterval(function () {
 }, 1000);
 
 function myFunction() {
+    width = document.documentElement.clientWidth;
+    height = document.documentElement.clientHeight;
+
     var particle = createParticle();
     particle.src = stars[Math.floor(Math.random() * stars.length)];
     bg.appendChild(particle);
@@ -38,9 +42,11 @@ function myFunction() {
     void particle.offsetWidth;
 
     // to get duration of how long the particle should live V
+    let randomX = Math.floor(Math.random() * width);
+    let randomY = Math.floor(Math.random() * height);
 
-    const destX = Math.floor(Math.random() * width);
-    const destY = Math.floor(Math.random() * height);
+    const destX = randomX > width ? width : randomX;
+    const destY = randomY > height ? height : randomY;
 
     const distance = Math.sqrt(
         (destX - particle.offsetLeft) ** 2 + (destY - particle.offsetTop) ** 2
@@ -63,7 +69,9 @@ function createParticle() {
     img.style.position = "absolute";
     img.style.top = `2px`;
     img.style.opacity = "0.8";
-    img.style.left = `${Math.floor(Math.random() * width)}px`;
-    img.style.top = `${Math.floor(Math.random() * height)}px`;
+    let randomLeft = Math.floor(Math.random() * width);
+    let randomTop = Math.floor(Math.random() * height);
+    img.style.left = `0px`;
+    img.style.top = `0px`;
     return img;
 }

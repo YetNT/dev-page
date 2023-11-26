@@ -1,5 +1,5 @@
 img {
-    width: 2em;
+    width: 2.4em;
 }
 #socials {
     display: flex;
@@ -15,7 +15,7 @@ img {
         row-gap: 2em;
     }
     img {
-        width: 1.3em;
+        width: 1.8em;
     }
 }
 
