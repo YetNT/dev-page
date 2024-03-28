@@ -6,10 +6,9 @@ const links = {
     spotify: "https://open.spotify.com/artist/1QJse7ZddVCImq5Y2rqYFE",
     "apple-music": "https://music.apple.com/ug/artist/yetnt/1635739865",
     soundcloud: "https://soundcloud.com/hloni-802664869",
-    "youtube-music":
-        "https://music.youtube.com/channel/UCzH7_TSCrcGoCUzXSYkJ-HA",
     youtube: "https://www.youtube.com/@yetnt",
-    audiotool: "https://www.audiotool.com/user/yetnt/",
+    beatstars: "https://www.beatstars.com/hlonipoole692nwy",
+    instagram: "https://www.instagram.com/yetnt_",
 };
 
 const stars = ["./img/4.svg", "./img/5.svg", "./img/6.svg"];
