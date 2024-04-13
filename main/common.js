@@ -12,7 +12,7 @@ const links = {
     audiotool: "https://audiotool.com/yetnt/",
 };
 
-const stars = ["./img/4.svg", "./img/5.svg", "./img/6.svg"];
+const stars = ["../img/4.svg", "../img/5.svg", "../img/6.svg"];
 
 let width = document.documentElement.clientWidth;
 let height = document.documentElement.clientHeight;
