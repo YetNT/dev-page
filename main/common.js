@@ -9,6 +9,7 @@ const links = {
     youtube: "https://www.youtube.com/@yetnt",
     beatstars: "https://www.beatstars.com/hlonipoole692nwy",
     instagram: "https://www.instagram.com/yetnt_",
+    audiotool: "https://audiotool.com/yetnt/",
 };
 
 const stars = ["./img/4.svg", "./img/5.svg", "./img/6.svg"];
