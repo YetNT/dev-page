@@ -76,7 +76,8 @@ img {
     justify-content: center;
 }
 
-#socials div div {
+#socials div div,
+.links {
     /* actual div with socials */
     display: flex;
     flex-direction: row;
