@@ -12,7 +12,8 @@ const links = {
     audiotool: "https://audiotool.com/yetnt/",
 };
 
-const stars = ["../img/4.svg", "../img/5.svg", "../img/6.svg"];
+const path = document.body.id != "main" ? "../../img/" : "../img/";
+const stars = [`${path}4.svg`, `${path}5.svg`, `${path}6.svg`];
 
 let width = document.documentElement.clientWidth;
 let height = document.documentElement.clientHeight;
@@ -22,7 +23,7 @@ for (const key of Object.keys(links)) {
 
     link.setAttribute("href", links[key]);
     const image = link.querySelector("img");
-    image.setAttribute("src", `./img/${key}.svg`);
+    image.setAttribute("src", `${path}${key}.svg`);
 }
 
 const bg = document.getElementById("background");
